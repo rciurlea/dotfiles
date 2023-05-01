@@ -1,0 +1,114 @@
+import:
+  - ~/.config/alacritty/brogrammer.yml
+
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 4 
+    y: 4
+
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
+
+  # Window decorations
+  #
+  # Values for `decorations`:
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  #
+  # Values for `decorations` (macOS only):
+  #     - transparent: Title bar, transparent background and title bar buttons
+  #     - buttonless: Title bar, transparent background and no title bar buttons
+  decorations: full
+
+  # Startup Mode (changes require restart)
+  #
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  #
+  # Values for `startup_mode` (macOS only):
+  #   - SimpleFullscreen
+  #startup_mode: Windowed
+
+  # Window title
+  #title: Alacritty
+
+  # Allow terminal applications to change Alacritty's window title.
+  #dynamic_title: true
+
+  # Decorations theme variant
+  #
+  # Override the variant of the System theme/GTK theme/Wayland client side
+  # decorations. Commonly supported values are `Dark`, `Light`, and `None` for
+  # auto pick-up. Set this to `None` to use the default theme variant.
+  decorations_theme_variant: Dark
+
+  # Make `Option` key behave as `Alt` (macOS only):
+  #   - OnlyLeft
+  #   - OnlyRight
+  #   - Both
+  #   - None (default)
+  #option_as_alt: None
+
+#scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  #history: 10000
+
+  # Scrolling distance multiplier.
+  #multiplier: 3
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    family: Menlo
+
+    # The `style` can be specified to pick a specific face.
+    # style: Book
+
+  # Bold font face
+  # bold:
+    # Font family
+    #
+    # If the bold family is not specified, it will fall back to the
+    # value specified for the normal font.
+    #  family: Operator Mono
+
+    # The `style` can be specified to pick a specific face.
+    # style: Medium
+  # Point size
+  size: 14.0
+
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+  offset:
+    x: 0
+    y: 8
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the
+  # right, increasing `y` moves the glyph upward.
+  glyph_offset:
+    x: 0
+    y: 4
+
+key_bindings:
+  - { key: Key1,  mods: Command, chars: "\x021" }
+  - { key: Key2,  mods: Command, chars: "\x022" }
+  - { key: Key3,  mods: Command, chars: "\x023" }
+  - { key: Key4,  mods: Command, chars: "\x024" }
+  - { key: Key5,  mods: Command, chars: "\x025" }
+  - { key: Key6,  mods: Command, chars: "\x026" }
+  - { key: Key7,  mods: Command, chars: "\x027" }
+  - { key: Key8,  mods: Command, chars: "\x028" }
+  - { key: Key9,  mods: Command, chars: "\x029" }
+  - { key: T,     mods: Command, chars: "\x02c" }
+  - { key: W,     mods: Command, chars: "\x02x" }
+  - { key: O,     mods: Command, chars: "\x02o" }
+
