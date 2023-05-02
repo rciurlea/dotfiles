@@ -7,7 +7,7 @@ env:
 {{- if or (eq .chezmoi.hostname "trogdor") (eq .chezmoi.hostname "strongbad") }}
 shell:
   program: /bin/bash
-  args: ["/Users/rciurlea/bin/cert_ssh_tmux.sh"]
+  args: ["-l", "/Users/rciurlea/bin/cert_ssh_tmux.sh"]
 {{- end }}
 
 window:
