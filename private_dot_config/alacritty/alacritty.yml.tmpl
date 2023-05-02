@@ -4,9 +4,9 @@ import:
 env:
   TERM: xterm-256color
 
-{{- if or (eq .chezmoi.hostname "trogdor") (eq .chezmoi.hostname "strongbad") }}
+{{ if or (eq .chezmoi.hostname "trogdor") (eq .chezmoi.hostname "strongbad") }}
 shell:
-  program: /usr/local/bin/fish
+  program: ~/bin/cert_ssh_tmux.sh
 {{- end }}
 
 window:
