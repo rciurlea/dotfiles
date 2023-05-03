@@ -7,8 +7,8 @@ set-option -g status-left ''
 set-option -g status-style bg='#190F2F'
 set-option -g status-right '#[fg=white][#S] #h{{ if eq .chezmoi.hostname "lappy386" }} #(~/bin/ttl.sh){{ end }}'
 set-window-option -g window-status-current-style bg='#ebdef0',fg='#000000',bold
-set-window-option -g window-status-format ' #I #W#F '
-set-window-option -g window-status-current-format '#I #W#F'
+set-window-option -g window-status-format '  #I #W#F  '
+set-window-option -g window-status-current-format '#[fg=#ebdef0,bg=#190f2f]#[fg=black,bg=#ebdef0] #I #W#F #[fg=#ebdef0,bg=#190f2f]'
 set -g base-index 1
 set -g pane-base-index 1
 set -g mouse on
