@@ -4,11 +4,11 @@ set -ag terminal-overrides ",xterm-256color:RGB"
 set -s escape-time 50
 set-option -g status-position top
 set-option -g status-left ''
-set-option -g status-style bg='#190F2F'
-set-option -g status-right '#[fg=white][#S] #h{{ if eq .chezmoi.hostname "lappy386" }} #(~/bin/ttl.sh){{ end }}'
+set-option -g status-style bg='#eaeaa4',fg='#000000'
+set-option -g status-right '#[fg=#000000][#S] #h {{ if eq .chezmoi.hostname "lappy386" }}#(~/bin/ttl.sh){{ end }}'
 set-window-option -g window-status-current-style bg='#ebdef0',fg='#000000',bold
 set-window-option -g window-status-format '  #I #W#F  '
-set-window-option -g window-status-current-format '#[fg=#ebdef0,bg=#190f2f]#[fg=black,bg=#ebdef0] #I #W#F #[fg=#ebdef0,bg=#190f2f]'
+set-window-option -g window-status-current-format '#[fg=#000000,bg=#eaeaa4]#[fg=#ffffff,bg=#000000] #I #W#F #[fg=#000000,bg=#eaeaa4]'
 set -g base-index 1
 set -g pane-base-index 1
 set -g mouse on
