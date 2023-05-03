@@ -16,7 +16,7 @@ set-option -g detach-on-destroy off
 set-option -g renumber-windows on
 bind-key x kill-pane
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
-bind C-j display-popup -T " Switch Session " -E "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse | xargs tmux switch-client -t"
+bind C-j display-popup -T " Switch Session " -E "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse | xargs -I {} tmux switch-client -t '{}'"
 
 # More intuitive pane splitting key-bindings, open all in current path
 bind - split-window -v -c '#{pane_current_path}'
