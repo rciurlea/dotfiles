@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -3516,26 +3518,38 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf700-0x300000</key>
+		<key>0xf700-0x300000-0x0</key>
 		<dict>
 			<key>Action</key>
-			<integer>7</integer>
-			<key>Text</key>
+			<integer>11</integer>
+			<key>Label</key>
 			<string></string>
+			<key>Text</key>
+			<string>0x02 0x1b 0x5b 0x41</string>
+			<key>Version</key>
+			<integer>0</integer>
 		</dict>
-		<key>0xf701-0x300000</key>
+		<key>0xf701-0x300000-0x0</key>
 		<dict>
 			<key>Action</key>
-			<integer>6</integer>
-			<key>Text</key>
+			<integer>11</integer>
+			<key>Label</key>
 			<string></string>
+			<key>Text</key>
+			<string>0x02 0x1b 0x5b 0x42</string>
+			<key>Version</key>
+			<integer>0</integer>
 		</dict>
-		<key>0xf702-0x300000</key>
+		<key>0xf702-0x300000-0x0</key>
 		<dict>
 			<key>Action</key>
-			<integer>2</integer>
-			<key>Text</key>
+			<integer>11</integer>
+			<key>Label</key>
 			<string></string>
+			<key>Text</key>
+			<string>0x02 0x1b 0x5b 0x44</string>
+			<key>Version</key>
+			<integer>0</integer>
 		</dict>
 		<key>0xf702-0x320000</key>
 		<dict>
@@ -3544,12 +3558,16 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf703-0x300000</key>
+		<key>0xf703-0x300000-0x0</key>
 		<dict>
 			<key>Action</key>
-			<integer>0</integer>
-			<key>Text</key>
+			<integer>11</integer>
+			<key>Label</key>
 			<string></string>
+			<key>Text</key>
+			<string>0x02 0x1b 0x5b 0x43</string>
+			<key>Version</key>
+			<integer>0</integer>
 		</dict>
 		<key>0xf703-0x320000</key>
 		<dict>
