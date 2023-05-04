@@ -23,6 +23,17 @@ bind - split-window -v -c '#{pane_current_path}'
 bind \\ split-window -h -c '#{pane_current_path}'
 bind c new-window -c '#{pane_current_path}'
 
+# Easy pane resizing, fine granularity
+bind -n S-Left resize-pane -L 2
+bind -n S-Right resize-pane -R 2
+bind -n S-Down resize-pane -D 1
+bind -n S-Up resize-pane -U 1
+# Pane resizing, coarse, works with iTerm mapping from cmd-arrow to C-b arrow
+bind Left resize-pane -L 10
+bind Right resize-pane -R 10
+bind Down resize-pane -D 5
+bind Up resize-pane -U 5
+
 # Smart pane switching with awareness of Vim splits.
 # See: https://github.com/christoomey/vim-tmux-navigator
 is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
