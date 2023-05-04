@@ -1215,7 +1215,7 @@ window_padding_width 4
 
 #: Advanced 
 {{- if or (eq .chezmoi.hostname "trogdor") (eq .chezmoi.hostname "strongbad") }}
-shell /bin/bash /Users/rciurlea/bin/cert_ssh_tmux.sh 
+shell /bin/bash -l /Users/rciurlea/bin/cert_ssh_tmux.sh 
 {{- end }}
 #: The shell program to execute. The default value of . means to use
 #: whatever shell is set as the default shell for the current user.
