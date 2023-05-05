@@ -1,14 +1,21 @@
+{{- $homeServers := list "bart" "maggie" -}}
+{{- $workServers := list "lappy386" -}}
+{{- $barColor := "#eaeaa4" -}}
+{{- if has .chezmoi.hostname $homeServers -}}
+    {{- $barColor = "#999999" -}}
+{{- end -}}
+
 set -g default-terminal "tmux-256color"
 set -ag terminal-overrides ",xterm-256color:RGB"
 
 set -s escape-time 50
 set-option -g status-position top
 set-option -g status-left '  '
-set-option -g status-style bg='#eaeaa4',fg='#000000'
+set-option -g status-style bg='{{ $barColor }}',fg='#000000'
 set-option -g status-right '#[fg=#000000][#S] #h {{ if eq .chezmoi.hostname "lappy386" }}#(~/bin/ttl.sh){{ end }}'
 set-window-option -g window-status-current-style bg='#ebdef0',fg='#000000',bold
 set-window-option -g window-status-format '  #I #W#F  '
-set-window-option -g window-status-current-format '#[fg=#131313,bg=#eaeaa4]#[fg=#ffffff,bg=#131313] #I #W#F #[fg=#131313,bg=#eaeaa4]'
+set-window-option -g window-status-current-format '#[fg=#131313,bg={{ $barColor }}]#[fg=#ffffff,bg=#131313] #I #W#F #[fg=#131313,bg={{ $barColor }}]'
 set -g base-index 1
 set -g pane-base-index 1
 set -g mouse on
