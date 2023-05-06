@@ -1,9 +1,11 @@
 {{- $homeServers := list "bart" "maggie" -}}
 {{- $workServers := list "lappy386" -}}
-{{- $barColor := "#eaeaa4" -}} # original yellow
-{{- $barColor = "#d3bfe8" -}} # lilac sort of thing, okish
+
+{{- $barColor := "#d3bfe8" -}} # lilac sort of thing, okish
 {{- if has .chezmoi.hostname $homeServers -}}
     {{- $barColor = "#76b5c5" -}}  # light blueish
+{{- end -}}
+{{- if has .chezmoi.hostname $workServers -}}
     {{- $barColor = "#bfe8c3" -}}  # light green
 {{- end -}}
 
