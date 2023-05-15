@@ -2,7 +2,7 @@ return {
     -- the colorscheme should be available when starting Neovim
     {
         "folke/tokyonight.nvim",
-        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        lazy = false,    -- make sure we load this during startup if it is your main colorscheme
         priority = 1000, -- make sure to load this before all the other start plugins
     },
     {
@@ -49,6 +49,12 @@ return {
         "numToStr/Comment.nvim",
         config = function()
             require("Comment").setup()
+        end
+    },
+    {
+        "norcalli/nvim-colorizer.lua",
+        config = function()
+            require("colorizer").setup()
         end
     },
 }
