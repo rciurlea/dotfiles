@@ -4,7 +4,7 @@ README.md
 {{- end }}
 
 {{- $workMachines := list "trogdor" "strongbad" "lappy386" -}}
-{{- if has .chezmoi.hostname $workMachines -}}
+{{- if has .chezmoi.hostname $workMachines }}
 .config/nvim/lua/home/plugins/lsp.lua
-{{- end -}}
+{{- end }}
 .config/nvim/lazy-lock.json
