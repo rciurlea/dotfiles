@@ -11,7 +11,7 @@ return {
             require("catppuccin").setup({})
         end
     },
-    { 
+    {
         "Yazeed1s/oh-lucy.nvim",
         config = function()
             -- load the colorscheme here
@@ -39,10 +39,16 @@ return {
             require("lualine").setup {
                 icons_enabled = true,
                 options = {
-                    component_separators = '', 
+                    component_separators = '',
                     section_separators = ''
                 },
             }
+        end
+    },
+    {
+        "numToStr/Comment.nvim",
+        config = function()
+            require("Comment").setup()
         end
     },
 }
