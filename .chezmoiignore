@@ -7,3 +7,4 @@ README.md
 {{- if has .chezmoi.hostname $workMachines -}}
 .config/nvim/lua/home/plugins/lsp.lua
 {{- end -}}
+.config/nvim/lazy-lock.json
