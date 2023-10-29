@@ -1,23 +1,4 @@
 return {
-    -- the colorscheme should be available when starting Neovim
-    {
-        "folke/tokyonight.nvim",
-        lazy = false,    -- make sure we load this during startup if it is your main colorscheme
-        priority = 1000, -- make sure to load this before all the other start plugins
-    },
-    {
-        "catppuccin/nvim",
-        config = function()
-            require("catppuccin").setup({})
-        end
-    },
-    {
-        "Yazeed1s/oh-lucy.nvim",
-        config = function()
-            -- load the colorscheme here
-            vim.cmd([[colorscheme oh-lucy]])
-        end,
-    },
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.1",
@@ -32,12 +13,18 @@ return {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate"
     },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { 'rose-pine/neovim', name = 'rose-pine' },
+    { 'morhetz/gruvbox', name = 'gruvbox' },
+    { 'rebelot/kanagawa.nvim', name = 'kanagawa' },
+    { 'NLKNguyen/papercolor-theme', name = 'papercolor' },
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
             require("lualine").setup {
                 icons_enabled = true,
+                theme = "ayu_light",
                 options = {
                     component_separators = '',
                     section_separators = ''
