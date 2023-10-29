@@ -1,12 +1,12 @@
 {{- $homeServers := list "bart" "maggie" -}}
 {{- $workServers := list "lappy386" -}}
 
-{{- $barColor := "#d3bfe8" -}} # lilac sort of thing, okish
+{{- $barColor := "#d3bfe8" -}}
 {{- if has .chezmoi.hostname $homeServers -}}
-    {{- $barColor = "#76b5c5" -}}  # light blueish
+    {{- $barColor = "#76b5c5" -}}
 {{- end -}}
 {{- if has .chezmoi.hostname $workServers -}}
-    {{- $barColor = "#bfe8c3" -}}  # light green
+    {{- $barColor = "#bfe8c3" -}}
 {{- end -}}
 
 set -g default-terminal "tmux-256color"
