@@ -1,0 +1,5 @@
+{{- if ne .chezmoi.hostname "lappy386" -}}
+require "kickstart"
+{{- else -}}
+require "work"
+{{ end }}

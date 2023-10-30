@@ -3,8 +3,7 @@ README.md
 .config/alacritty
 {{- end }}
 
-{{- $workMachines := list "trogdor" "strongbad" "lappy386" -}}
-{{- if has .chezmoi.hostname $workMachines }}
-.config/nvim/lua/home/plugins/lsp.lua
+{{- if eq .chezmoi.hostname "lappy386" }}
+.config/nvim/lua/work/
 {{- end }}
 .config/nvim/lazy-lock.json
