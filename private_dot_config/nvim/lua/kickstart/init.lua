@@ -163,21 +163,21 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         component_separators = '|',
         section_separators = '',
       },
     },
   },
 
-  {
-    -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help ibl`
-    main = 'ibl',
-    opts = {},
-  },
+  -- {
+  --   -- Add indentation guides even on blank lines
+  --   'lukas-reineke/indent-blankline.nvim',
+  --   -- Enable `lukas-reineke/indent-blankline.nvim`
+  --   -- See `:help ibl`
+  --   main = 'ibl',
+  --   opts = {},
+  -- },
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
@@ -213,6 +213,14 @@ require('lazy').setup({
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ':TSUpdate',
+    config = function ()
+      local configs = require('nvim-treesitter.configs')
+      configs.setup({
+        ensure_installed = { 'go', 'lua', 'vim', 'html', 'javascript', 'typescript', 'elixir', 'heex' },
+        highlight = { enable = true },
+        indent = { enable = true },
+      })
+    end
   },
 
 --   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart

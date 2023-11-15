@@ -1,4 +1,4 @@
-{{- $homeServers := list "bart" "maggie" -}}
+{{- $homeServers := list "bart" "marge" -}}
 {{- $workServers := list "lappy386" -}}
 
 {{- $barColor := "#d3bfe8" -}}
@@ -21,8 +21,14 @@ set-option -g status-right '#[fg=#000000][#S] #h {{ if eq .chezmoi.hostname "lap
 set-window-option -g window-status-current-style bg='#ebdef0',fg='#000000',bold
 set-window-option -g window-status-format '  #I #W  '
 set-window-option -g window-status-current-format '#[fg=#131313,bg={{ $barColor }}]#[fg=#ffffff,bg=#131313]  #I #W  #[fg=#131313,bg={{ $barColor }}]'
+
+# Decorations etc.
+set -g popup-border-lines rounded
+
+# Non-sucky indexing.
 set -g base-index 1
 set -g pane-base-index 1
+
 set -g mouse on
 set -g focus-events on
 set-option -g detach-on-destroy off
