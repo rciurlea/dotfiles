@@ -13,9 +13,10 @@ family = "Monaco Nerd Font"
 alphabet = "jfkdls;ahgurieowpq"
 
 {{- if or (eq .chezmoi.hostname "trogdor") (eq .chezmoi.hostname "strongbad") }}
+
 [shell]
-  program = "/bin/bash"
-  args = ["-l", "/Users/rciurlea/bin/cert_ssh_tmux.sh"]
+program = "/bin/bash"
+args = ["-l", "/Users/rciurlea/bin/cert_ssh_tmux.sh"]
 {{- end }}
 
 [[hints.enabled]]
