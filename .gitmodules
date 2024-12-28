@@ -1,0 +1,3 @@
+[submodule "private_dot_config/nvim/lua/kickstart"]
+	path = private_dot_config/nvim/lua/kickstart
+	url = git@github.com:rciurlea/kickstart.nvim.git
