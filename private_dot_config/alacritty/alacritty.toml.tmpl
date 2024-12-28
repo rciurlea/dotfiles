@@ -1,5 +1,5 @@
 [general]
-{{- if or (eq .chezmoi.hostname "trogdor") (eq .chezmoi.hostname "strongbad") -}}
+{{ if or (eq .chezmoi.hostname "trogdor") (eq .chezmoi.hostname "strongbad") -}}
 import = ["/Users/rciurlea/.config/alacritty/brogrammer.toml"]
 {{- else -}}
 import = ["/Users/radu/.config/alacritty/brogrammer.toml"]
