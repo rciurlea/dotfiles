@@ -6,4 +6,3 @@ README.md
 {{- if eq .chezmoi.hostname "lappy386" }}
 .config/nvim/lua/work/
 {{- end }}
-.config/nvim/lazy-lock.json
