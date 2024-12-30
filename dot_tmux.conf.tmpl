@@ -1,9 +1,9 @@
-{{- $homeServers := list "bart" "marge" -}}
+{{- $homeServers := list "bart" "marge" "ned" -}}
 {{- $workServers := list "lappy386" -}}
 
 {{- $barColor := "#d3bfe8" -}}
 {{- if has .chezmoi.hostname $homeServers -}}
-    {{- $barColor = "#76b5c5" -}}
+    {{- $barColor = "#eacc5f" -}}
 {{- end -}}
 {{- if has .chezmoi.hostname $workServers -}}
     {{- $barColor = "#bfe8c3" -}}
