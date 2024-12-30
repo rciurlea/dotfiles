@@ -1,0 +1,7 @@
+{{- $cmd := "batcat" -}}
+{{- if eq .chezmoi.os "darwin" -}}
+  {{- $cmd = "bat" -}}
+{{- end -}}
+function cat --wraps='{{ $cmd }} -p' --description 'alias cat={{ $cmd }} -p'
+  {{ $cmd }} -p $argv
+end
