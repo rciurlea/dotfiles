@@ -1,4 +1,4 @@
-[".config/nvim/lua/kickstart"]
+[".config/nvim/lua/kickstart.nvim"]
     type = "git-repo"
     url = "https://github.com/rciurlea/kickstart.nvim.git"
     refreshPeriod = "24h"
