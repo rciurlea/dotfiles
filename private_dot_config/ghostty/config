@@ -1,0 +1,39 @@
+font-family = "Input Mono"
+font-style = "Regular"
+font-style-bold = "Medium"
+font-style-bold-italic = "Medium Italic"
+font-thicken = true
+font-size = 14
+adjust-cell-height = 4
+window-padding-x = 6
+theme = "Brogrammer"
+macos-titlebar-proxy-icon = hidden
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+# The \u{0002} is ctrl-b in Unicode, as a Zig string literal.
+# These are used for changing tabs (tmux windows).
+keybind = cmd+one=text:\u{0002}1
+keybind = cmd+two=text:\u{0002}2
+keybind = cmd+three=text:\u{0002}3
+keybind = cmd+four=text:\u{0002}4
+keybind = cmd+five=text:\u{0002}5
+keybind = cmd+six=text:\u{0002}6
+keybind = cmd+seven=text:\u{0002}7
+keybind = cmd+eight=text:\u{0002}8
+keybind = cmd+nine=text:\u{0002}9
+
+# More tmux window management stuff
+keybind = cmd+t=text:\u{0002}c
+keybind = cmd+w=text:\u{0002}x
+keybind = cmd+backslash=text:\u{0002}\\
+keybind = cmd+minus=text:\u{0002}-
+keybind = cmd+up=text:\u{0002}\u{001B}[A
+keybind = cmd+down=text:\u{0002}\u{001B}[B
+keybind = cmd+left=text:\u{0002}\u{001B}[D
+keybind = cmd+right=text:\u{0002}\u{001B}[C
+
+# Use shift for font zooming, since we're splitting tmux w/o.
+keybind = cmd+shift+minus=decrease_font_size:1
+keybind = cmd+shift+equal=increase_font_size:1
