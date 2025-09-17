@@ -15,15 +15,15 @@ shell-integration-features = no-cursor
 
 # The \u{0002} is ctrl-b in Unicode, as a Zig string literal.
 # These are used for changing tabs (tmux windows).
-keybind = cmd+one=text:\u{0002}1
-keybind = cmd+two=text:\u{0002}2
-keybind = cmd+three=text:\u{0002}3
-keybind = cmd+four=text:\u{0002}4
-keybind = cmd+five=text:\u{0002}5
-keybind = cmd+six=text:\u{0002}6
-keybind = cmd+seven=text:\u{0002}7
-keybind = cmd+eight=text:\u{0002}8
-keybind = cmd+nine=text:\u{0002}9
+keybind = cmd+Digit1=text:\u{0002}1
+keybind = cmd+Digit2=text:\u{0002}2
+keybind = cmd+Digit3=text:\u{0002}3
+keybind = cmd+Digit4=text:\u{0002}4
+keybind = cmd+Digit5=text:\u{0002}5
+keybind = cmd+Digit6=text:\u{0002}6
+keybind = cmd+Digit7=text:\u{0002}7
+keybind = cmd+Digit8=text:\u{0002}8
+keybind = cmd+Digit9=text:\u{0002}9
 
 # More tmux window management stuff
 keybind = cmd+t=text:\u{0002}c
