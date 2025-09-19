@@ -14,7 +14,7 @@ set -ag terminal-overrides ",xterm-256color:RGB"
 
 set -s escape-time 50
 set -g set-titles on
-set -g set-titles-string 'TMUX@localhost [#S]'
+set -g set-titles-string 'tmux: #{user}@#h [#S]'
 set-option -g history-limit 50000
 set-option -g status-position top
 set-option -g status-left '  '
