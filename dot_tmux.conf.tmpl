@@ -1,5 +1,6 @@
 {{- $homeServers := list "bart"  "ned" "slh" "fry" "bender" "snowball" -}}
 {{- $workServers := list "lappy386" -}}
+{{- $allServers := concat $homeServers $workServers -}}
 
 {{- $barColor := "#d3bfe8" -}}
 {{- if has .chezmoi.hostname $homeServers -}}
@@ -9,12 +10,17 @@
     {{- $barColor = "#bfe8c3" -}}
 {{- end -}}
 
+{{- $windowTitle := "tmux [#S]" -}}
+{{- if has .chezmoi.hostname $allServers -}}
+    {{- $windowTitle = "tmux <#{user}@#h> [#S]" -}}
+{{- end -}}
+
 set -g default-terminal "tmux-256color"
 set -ag terminal-overrides ",xterm-256color:RGB"
 
 set -s escape-time 50
 set -g set-titles on
-set -g set-titles-string 'tmux: #{user}@#h [#S]'
+set -g set-titles-string '{{ $windowTitle }}'
 set-option -g history-limit 50000
 set-option -g status-position top
 set-option -g status-left '  '
